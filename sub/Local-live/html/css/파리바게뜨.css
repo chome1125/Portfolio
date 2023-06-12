@@ -1,0 +1,249 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    line-height: 1;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    line-height: 90px;
+}
+
+
+li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+    font-size: 14px;
+}
+
+header .inner nav .left_menu>li:first-child{
+    margin-left: 0;
+    color: #feda24;
+}
+
+header .inner nav .right_menu li:last-child{
+    margin-right: 0;
+    /* font-size: 22px; */
+}
+
+
+header{
+    height: 90px;
+    width: 100%;
+    background-color: #023586;
+    color: rgb(255, 255, 255);
+    position: relative;
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+header .inner{
+    width: 1420px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header .inner nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .inner h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 0;
+}
+
+header .inner nav ul li .sub_menu{
+    display: none;
+}
+
+.main_visual{
+    width: 100%;
+}
+
+.main_visual .inner{
+    width: 100%;
+    height: 793px;
+    display: flex;
+}
+
+
+.main_visual .inner a div img{
+    width: 640px;
+    object-fit: cover;
+    display: block;
+}
+
+.cont01{
+    padding: 160px 0 245px;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.cont01 .inner{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.cont01 .inner h3{
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.cont01 .inner .PB_MAGAZINE{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 160px;
+}
+
+.cont01 .inner .PB_MAGAZINE .item{
+    width: 464px;
+    position: relative;
+}
+
+.cont01 .inner .PB_MAGAZINE .item img{
+    width: 100%;
+    height: 570px;
+
+    object-fit: cover;
+}
+
+.cont01 .inner .PB_MAGAZINE .item .text{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 25px 30px;
+    color: #FFF;
+}
+
+.cont01 .inner .PB_MAGAZINE .item .text h4{
+    margin-bottom: 17px;
+    font-size: 28px;
+}
+
+.cont01 .inner2{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+h3{
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.cont01 .inner2 .PB_STORY .floor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .inner2 .PB_STORY .floor:first-child{
+    margin-bottom: 40px;
+}
+.cont01 .inner2 .PB_STORY .floor:nth-child(2){
+    margin-bottom: 160px;
+}
+
+
+.cont01 .inner2 .PB_STORY .floor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .inner2 .PB_STORY .floor div a img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 👩👩👩👩👩👩floor 안에 글자 공통 꾸며주기👩👩👩👩👩👩 */
+.cont01 .inner2 .PB_STORY .floor div{
+    width: 342px;
+    height: 342px;
+    color: #333;
+    font-size: 10px;
+}
+
+.cont01 .inner2 .PB_STORY .floor div a strong{
+    display: block;
+    font-size: 14px;
+    color: #023586;
+    margin-bottom: 25px;
+}
+
+.cont01 .inner2 .PB_STORY .floor div h4{
+    font-size: 24px;
+}
+
+.cont01 .inner2 .PB_STORY .floor div p{
+    display: block;
+    word-break: keep-all;
+}
+
+.cont01 .inner2 .PB_STORY .floor div a p{
+    display: block;
+    font-size: 14px;
+    margin: 15px 0 27px;
+}
+
+.inner3 .Promotion .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner3 .Promotion .list .item{
+    width: 341px;
+}
+
+.inner3 .Promotion .list .item figure{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inner3 .Promotion .list .item figure span{
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    background-color: #023586;
+    width: 74px;
+    height: 30px;
+    color: #fff;
+}
+.inner3 .Promotion .list .item figure img{
+    width: 100%;
+}
+
+.inner3 .Promotion .list .item .text strong{
+    font-size: 20px;
+    color: #333;
+    word-break: keep-all;
+}
+
+.inner3 .Promotion .list .item .text p{
+    margin-top: 15px;
+    color: #797979;
+}
+
+

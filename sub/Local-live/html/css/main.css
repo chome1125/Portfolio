@@ -1,0 +1,239 @@
+@charset="UTF-8";
+
+/* 폰트연결 */
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+
+/* 초기값 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'NanumBarunGothic';
+    font-weight: 400;   
+    color: #333;
+    line-height: 1;
+}
+
+header{
+    width: 1440px;
+    height: 120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li{
+    display: inline-block;
+    line-height: 120px;
+    margin: 0 20px;
+}
+
+header .user li {
+    display: inline-block;
+    line-height: 120px;
+    margin-left: 35px;
+}
+
+header .user li:first-child{
+    margin: 0;
+}
+
+header h1{
+    margin-top: 32px;
+    /* font-size: 20px; */
+}
+
+/* 💟💟💟💟💟💟 .main_visual 💟💟💟💟💟💟 */
+main .class{
+    width: 640px;
+}
+
+main class img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 💛💛💛💛💛💛 .cont01 💛💛💛💛💛💛 */
+.cont1{
+ padding: 120px 0;
+}
+
+.cont1 .title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.cont1 .title h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.cont1 .title p{
+    color: #797979;
+}
+
+.cont1 .list{
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.cont1 .list .item{
+    width: 342px;
+}
+
+.cont1 .list .item figure{
+width: 100%;
+height: 420px;
+position: relative;
+border-radius: 10px;
+overflow: hidden;
+}
+
+.cont1 .list .item figure span{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: #068e81;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px 0;
+    font-size: 14px;
+}
+
+.cont1 .list .item div ul li{
+    display: inline-block;
+    border: 1px solid #797979;
+    height: 30px;
+    padding: 0 15px;
+    line-height: 30px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #797979;
+    margin: 25px 10px 20px 0;
+}
+
+.cont1 .list .item div h4{
+    font-size: 20px;
+    margin-bottom: 35px;
+    word-break: keep-all;
+    line-height: 26px;
+}
+
+.cont1 .list .item div strong{
+    font-size: 22px;
+}
+
+.cont1 .list .item div strong span{
+    color: #797979;
+    text-decoration: line-through;
+    font-size: 16px;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.cont2{
+    background-color: #f0f0f0;
+    padding: 120px 0;
+}
+.cont2 .inner .list{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.cont2 .inner .list .list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont2 .inner .list .title h3{
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cont2 .inner .list .title p{
+    margin-bottom: 40px;
+}
+
+.cont2 .inner .list .item {
+border-radius: 10px;
+overflow: hidden;
+}
+
+.cont2 .inner .list .item img{
+    display: block;
+}
+
+.cont2 .inner .list .item div{
+    background-color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.cont2 .inner .list .item div{
+    font-size: 20px;
+}
+
+.cont2 .inner .list .item div p{
+    color: #797979;
+    margin: 28px 0 10px;
+    text-decoration: line-through;
+}
+
+.cont2 .inner .list .item div strong{
+    font-size: 22px;
+}
+
+.cont2 .inner .list .item div strong span{
+    margin-left: 10px;
+    color: #ff0000;
+}
