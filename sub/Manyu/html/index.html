@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manyo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        window.onload = function(){
+        let menu = document.getElementById('menu_OC');
+        let opens = document.getElementsByClassName('menu_open')[0];
+        let close = document.getElementsByClassName('menu_close')[0];
+        let line = document.getElementsByClassName('depth01')[4];
+        let on = line.getElementsByTagName('ul')[0];
+        let bestMenu = document.getElementsByClassName('best_menu')[0];
+        let bestBtn = bestMenu.getElementsByTagName('li')
+        let list = document.getElementsByClassName('list');
+        let box = document.getElementsByClassName('box')[0];
+        let boximg = box.getElementsByTagName('img')[0]
+        let button = box.getElementsByClassName('button');
+        let bgc = document.getElementsByClassName('changed')[0];
+
+        menu.style.display = 'none'
+        
+        opens.onclick = function () {
+            menu.style.display = 'block'
+        }
+        close.onclick = function () {
+            menu.style.display = 'none'
+        }
+
+
+
+
+        line.onclick = function () {
+            on.classList.toggle('off');
+        }
+
+
+        
+        // for(let i = 0 ; i < bestBtn.length; i++){
+        //     bestBtn[i].onclick =function(){
+        //         bestBtn[0].classList.add('off')
+        //         bestBtn[1].classList.add('off')
+        //         bestBtn[i].classList.remove('off')
+        //     }
+        // }
+
+        bestBtn[0].style.color = 'red'
+        bestBtn[0].onclick = function () {
+            list[1].classList.add('off')
+            list[0].classList.remove('off')
+            bestBtn[0].style.color = 'red'
+            bestBtn[1].style.color = '#333333'
+        }
+
+        bestBtn[1].onclick = function () {
+            list[0].classList.add('off')
+            list[1].classList.remove('off')
+            bestBtn[0].style.color = '#333333'
+            bestBtn[1].style.color = 'red'
+        }
+
+
+
+
+
+
+        nowphoto = 0;
+        button[1].onclick = function () {
+            nowphoto++
+            console.log(nowphoto)
+            if(nowphoto == 1){
+                boximg.src = 'img/event2.jpg'
+            }else if(nowphoto == 2){
+                boximg.src = 'img/event1.jpg'
+                nowphoto =0
+            }
+            
+        }
+
+        button[0].onclick = function () {
+            nowphoto--
+            console.log(nowphoto)
+            if(nowphoto == 0){
+                boximg.src = 'img/event1.jpg'
+            }else if(nowphoto == -1){
+                boximg.src = 'img/event2.jpg'
+                nowphoto = 1
+            }
+            
+        }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="#"><img src="img/Logo.png" alt="" /></a></h1>
+            <div class="menu_open">
+                <img src="img/menu.png" alt="">
+            </div><!-- menu_open end -->
+            <nav id="menu_OC">
+                <div class="inner2">
+                    <div class="menu_close">
+                        <img src="img/icon_close_.png" alt="">
+                    </div><!-- menu_close end -->
+                    <ul>
+                        <li class="depth01">
+                            <a href="#">브랜드</a>
+                        </li>
+                        <hr>
+                        <li class="depth01">
+                            <a href="#">특가</a>
+                        </li>
+                        <hr>
+                        <li class="depth01">
+                            <a href="#">피부타입별</a>
+                        </li>
+                        <hr>
+                        <li class="depth01">
+                            <a href="#">카테고리별</a>
+                        </li>
+                        <hr>
+                        <li class="depth01">
+                            <a href="#">라인별</a>
+                            <ul class="off">
+                                <li><a href="#">갈락</a></li>
+                                <li><a href="#">퓨어 클렌징</a></li>
+                                <li><a href="#">바닐라부티크</a></li>
+                                <li><a href="#">비피다</a></li>
+                                <li><a href="#">이워 비건</a></li>
+                                <li><a href="#">온천수</a></li>
+                            </ul>
+                        </li>
+                        <hr>
+                        <li class="depth01">
+                            <a href="#">브랜드별</a>
+                        </li>
+                        <hr>
+                        <li class="depth01">
+                            <a href="#">신상품</a>
+                        </li>
+                        <hr>
+                        <li class="depth01">
+                            <a href="#">이벤트</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div><!-- inner end -->
+
+    </header>
+    <main>
+        <section class="main_visual">
+            <img src="img/mainVisual.png" alt="">
+            <div>
+                <h2>히더 진정 라인 런치 기념
+                    Special Week
+                </h2>
+                <a href="#">자세히 보기</a>
+            </div>
+        </section><!-- main_visual -->
+
+        <section class="best">
+            <div class="inner">
+                <h3>best sellers</h3>
+                <ul class="best_menu">
+                    <li class="on">전체</li>
+                    <li>클렌징</li>
+                    <li>스킨 토너 미스트</li>
+                    <li>앰플 에센스 오일</li>
+                </ul><!-- best_menu -->
+
+                <div class="list">
+                    <div class="item">
+                        <figure><img src="img/1650_main_019.jpg" alt="" /></figure>
+                        <div class="text">
+                            <h4>갈라토미 나이아신<br /> 에센스 50ml</h4>
+                            <div>
+                                <p>29,900원</p>
+                                <ul>
+                                    <li>18,000원</li>
+                                    <li>35%</li>
+                                </ul>
+                            </div>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <figure><img src="img/1512_main_028.png" alt="" /></figure>
+                        <div class="text">
+                            <h4>퓨어 클렌징 오일 200ml</h4>
+                            <div>
+                                <p>29,900원</p>
+                                <ul>
+                                    <li>17,400원</li>
+                                    <li>40%</li>
+                                </ul>
+                            </div>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                </div><!-- list end -->
+
+                <div class="list off">
+                    <div class="item">
+                        <figure><img src="img/1512_main_028.png" alt="" /></figure>
+                        <div class="text">
+                            <h4>퓨어 클렌징 오일 200ml</h4>
+                            <div>
+                                <p>29,900원</p>
+                                <ul>
+                                    <li>17,400원</li>
+                                    <li>40%</li>
+                                </ul>
+                            </div>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <figure><img src="img/830_main_054.png" alt="" /></figure>
+                        <div class="text">
+                            <h4>퓨어&딥 클렌징폼</h4>
+                            <div>
+                                <p>1,900원</p>
+                                <ul>
+                                    <li>18,000원</li>
+                                    <li>35%</li>
+                                </ul>
+                            </div>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                </div><!-- list end -->
+
+                <a href="#">
+                    전체보기
+                </a>
+            </div><!-- inner end -->
+        </section> <!-- best end -->
+
+        <section class="event">
+            <div class="inner">
+                <div class="title">
+                    <h3>event :</h3>
+                    <a href="#">전체보기</a>
+                </div><!-- title end -->
+                <div class="item">
+                    <figure class="box">
+                        <img src="img/event1.jpg" alt="">
+                        <p class="button">이전</p>
+                        <p class="button">다음</p>
+                    </figure>
+                    <div>
+                        <h4>마녀공장 집들이에 초대합니다!</h4>
+                        <p>어서오세요 공식몰이 새 단장했어요<br />
+                            할인 쿠폰&선착순 1,000명 사은품 증정</p>
+                        <span>2023.04.04 am 10:00~04.30 pm 11:59</span>
+                    </div>
+                </div><!-- item end -->
+            </div><!-- inner end -->
+        </section><!-- event end -->
+    </main>
+    <footer>
+        <p>COPYRIGHT © MANYOFACTORY<br />
+            ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+
+</html>

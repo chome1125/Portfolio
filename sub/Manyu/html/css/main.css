@@ -1,0 +1,348 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: ;
+    line-height: 1;
+    font-family: 'GmarketSansMedium';
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+}
+
+body::after{
+    content: "";
+    background-color: #0000008e;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.inner {
+    max-width: 100%;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner nav {
+    background-color: #00000085;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    z-index: 2;
+    overflow: auto;
+    
+}
+
+header .inner nav ul{
+   
+}
+
+/* 스크롤바 스타일 없애기 */
+header .inner nav::-webkit-scrollbar{
+    display: none;
+}
+
+header .inner nav .inner2 {
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+
+header .inner nav .inner2>ul {
+    margin-top: 130px;
+}
+
+header .inner nav .inner2 hr {
+    margin-bottom: 25px;
+    width: 261px;
+    height: 1px;
+    color: #838383;
+}
+
+header .inner nav .inner2 .depth01 {
+    margin-bottom: 25px;
+}
+
+header .inner nav .inner2 ul .depth01:nth-of-type(5) ul {
+    margin-top: 15px;
+    color: #838383;
+}
+
+header .inner nav .inner2 ul .depth01:nth-of-type(5) ul li {
+    margin-bottom: 15px;
+}
+
+
+
+
+header .inner nav .inner2 .menu_close {
+    text-align: right;
+}
+
+header .inner h1 {
+    height: 25px;
+}
+
+.main_visual {
+    height: 750px;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_visual div {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 110px;
+    left: 0;
+}
+
+.main_visual div h2 {
+    font-size: 35px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.main_visual div a {
+    display: block;
+    width: 170px;
+    height: 45px;
+    border: 1px solid #333;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 45px;
+    margin: 30px auto;
+}
+
+
+main .best {
+    margin-top: 60px;
+}
+
+main .best .inner h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+main .best .inner .best_menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+main .best .inner .list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+main .best .inner .list.off {
+    display: none;
+}
+
+main .best .inner .list .item {
+    width: calc(100% / 2 - 10px);
+}
+
+main .best .inner .list .item figure {
+    width: 100%;
+    /* height: 200px;   */
+}
+
+main .best .inner .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+main .best .inner .list .item .text h4 {
+    height: 32px;
+}
+
+main .best .inner .list .item .text div p {
+    margin: 20px 0 5px;
+    text-decoration: line-through;
+    color: #838383;
+}
+
+main .best .inner .list .item .text ul {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+main .best .inner .list .item .text ul li:last-child {
+    color: #ff0000;
+}
+
+main .best .inner>a {
+    display: block;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 14px;
+}
+
+main .event {
+    margin: 60px 0;
+}
+
+main .event .inner .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+main .event .inner .title h3 {
+    font-size: 30px;
+}
+
+main .event .inner .title a {
+    font-size: 14px;
+    align-items: center;
+    position: relative;
+    padding-right: 20px;
+}
+
+main .event .inner .title a::before{
+    position: absolute;
+    top: -6px;
+    right: 0;
+    content: "";
+    background-image: url(../img/icon_arrow_ios_forward_.png);
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+main .event .inner .item figure {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+main .event .inner .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .event .inner .item figure p {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #bb181d;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main .event .inner .item figure p:nth-of-type(1) {
+    left: -15px;
+}
+
+main .event .inner .item figure p:nth-of-type(2) {
+    right: -15px;
+}
+
+main .event .inner .item div h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+main .event .inner .item div p {
+    line-height: 1.3;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+main .event .inner .item div span {
+    font-size: 14px;
+    color: #838383;
+}
+
+footer {
+    background-color: #bb181d;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.off {
+    display: none;
+}
