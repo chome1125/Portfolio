@@ -1,0 +1,410 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+}
+   @font-face {
+    font-family: 'NanumSquare';
+    font-weight: 800;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1;
+    color: #333;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'NanumSquare';
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    display: block;
+}
+
+
+.splash{
+    width: 100%;
+    height: 100%;
+    background-color: #3887ff;
+    position: absolute;
+    z-index: 200;
+    text-align: center;
+    opacity: 1;
+    position: fixed;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.splash h2{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    color: #ffffff9d;
+    font-size: 40px;
+}
+
+.splash h2 span{
+    font-size: 50px;
+    margin: 0 10px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+header{
+    padding: 0 20px ;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 img{
+    height: 30px;
+}
+
+main {
+    margin-top: 15px;
+    padding: 0 20px ;
+    
+}
+
+
+
+
+main .search{
+    height: 45px;
+    width: 100%;
+    position: relative;
+}
+
+main .search input{
+    height: 100%;
+    width: 100%;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 5px;
+    padding-left: 50px;
+    font-size: 12px;
+    color: #595959;
+}
+
+main .search  img{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+main .cont01{
+    padding: 25px 0 30px;
+    overflow: hidden;
+}
+
+
+main .cont01 h3{
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+main .cont01 .container0{
+    width: 100%;
+}
+
+
+main .cont01 .container0 .container{
+    display: flex;
+    width: 200%;
+    height: 130px;
+    margin: 0 auto 30px;
+    position: relative;
+}
+
+.arrow{
+    position: relative;
+    background-color: #3887ff;
+    clear: both;
+}
+
+.arrow img:first-child{
+    position: absolute;
+    cursor: pointer;
+    top: 180px;
+    left: -20px;
+    z-index: 100;
+}
+
+.arrow img:last-child{
+    position: absolute;
+    cursor: pointer;
+    right: -520px;
+    top: 180px;
+    right: -20px;
+    z-index: 100;  
+}
+
+main .cont01 .container .list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+main .cont01 .container .list:last-child{
+    margin-left: 20px;
+}
+
+main .cont01 .container .list .item{
+    width: calc(100% / 3 - 10px);
+    height: 100%;
+    
+}
+
+main .cont01 .container .list .item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+main .cont01 .container .list .item a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+main .cont01 .container .list .item a h4{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+}
+
+
+
+/* 💛💛💛💛💛💛 icons 💛💛💛💛💛💛 */
+
+
+main .cont01 .icons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+main .cont01 .hide{
+    display: none;
+}
+
+main .cont01 .icons .item{
+    width: calc(100% / 6 - 20px);
+    height: 100%;
+    text-align: center;
+}
+
+main .cont01 .icons .more{
+    display: flex;
+    height: 80.53px;
+    position:relative;
+}
+
+main .cont01 .icons .more p{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13.5px;
+}
+
+main .cont01 .icons .more img{
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main .cont01 .icons .moreHide{
+    display: none;
+}
+main .cont01 .icons .item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+main .cont01 .icons .item a img{
+    width: 100%;
+    height: 100%;
+}
+
+main .cont01 .icons .more a img{
+    width: 40px;
+    height: 40px;
+}
+
+main .cont01 .icons .item a p{
+    font-size: 13.5px;
+    word-break: keep-all;
+    line-height: 1.3;
+}
+
+
+
+
+/* 💛💛💛💛💛💛 banner 💛💛💛💛💛💛 */
+
+
+main .cont01 .banner{
+    width: 100%;
+    overflow: hidden;
+}
+main .cont01 .banner .containerWrap{
+    width: 100%;
+    
+}
+
+main .cont01 .banner .containerWrap .container{
+    width: 300%;
+    /* 이미지 개수만큼 수정해야함 
+    300% : 이미지 3장 */
+    height: 100%;
+    display: flex;
+    
+}
+
+main .cont01 .banner .container .item{
+    width: 100%;
+}
+
+main .cont01 .banner .container .item a{
+    width: 100%;
+    display: block;
+}
+
+main .cont01 .banner .container .item a img{
+    width: 100%;
+}
+
+
+/* 💛💛💛💛💛💛 cont02 💛💛💛💛💛💛 */
+main .cont02 h3{
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+main .cont02 .list{
+    display: flex;
+    justify-content: space-between;
+}
+
+main .cont02 .list .item{
+    width: calc(100%/2 - 5px);
+    border: 1px solid #c5c5c5;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+main .cont02 .list .item a{
+    display: block;
+    width: 100%;
+}
+
+main .cont02 .list .item a img{
+    width: 100%;
+    
+}
+
+main .cont02 .list .item a .text{
+    padding: 12px;
+}
+
+main .cont02 .list .item a .text p:first-child{
+    font-size: 12px;
+    color: #838383;
+}
+
+main .cont02 .list .item a .text h4{
+    font-size: 15px;
+    margin: 8px 0 22px;
+    line-height: 1.3;
+    font-weight: 800;
+    
+}
+
+main .cont02 .list .item a .text p:nth-child(3){
+    font-size: 11px;
+    height: 17px;
+}
+
+main .cont02 .list .item a .text>span{
+    font-size: 13px;
+    margin-right: 10px;
+    text-decoration: line-through;
+    color: #838383;
+}
+
+main .cont02 .list .item a .text strong{
+    font-weight: 800;
+}
+
+main .cont02 .list:nth-child(2){
+    margin-bottom: 15px;
+}
+
+
+/* 💛💛💛💛💛💛 footer 💛💛💛💛💛💛 */
+
+
+
+footer{
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    
+}
+
+footer p{
+    color:#c0c0c0;
+    font-size: 10px;
+    text-align: center;
+    padding: 15px 0;
+    line-height: 1.3;
+}
