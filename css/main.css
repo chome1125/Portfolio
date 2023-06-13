@@ -280,7 +280,7 @@ body::before {
   display: block;
   z-index: 1;
   position: absolute;
-  top: 4290px;
+  top: 4237px;
   left: 0;
   animation: cloud10 120s linear infinite;
 }
