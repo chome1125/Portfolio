@@ -65,7 +65,7 @@
 html{font-size: 62.5%;}
 body{line-height: 1; color: #333; font-family: 'Pretendard'; font-weight: 500; }
 li{list-style: none;}
-a{color: inherit; text-decoration: none;}
+a{color: inherit; text-decoration: none; display: block;}
 img{display: block;}
 header{
     max-width: 1920px;
@@ -254,10 +254,15 @@ header .inner nav a img{
     
 }
 
+.cont01 .inner .list .item a{
+    
+}
+
 .cont01 .inner .list .item .image{
     width: 100%;
     position: relative;
     background-color: #f3f3f3;
+    margin: 0 0 3rem;
 }
 
 .cont01 .inner .list .item .image img{
@@ -283,7 +288,7 @@ header .inner nav a img{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 3rem 0 3rem;
+    margin: 0 0 3rem;
 }
 
 .cont01 .inner .list .item .slides p{
@@ -421,22 +426,21 @@ header .inner nav a img{
 .cont02{
     background-color: #741614;
     width: 100%; 
-    height: 100.4rem;
 }
 
 .cont02 .inner {
-    width: 1440px;
-    height: 100%;
+    max-width: 1440px;
+    width: calc(100% - 100px);
     margin: 0 auto;
     padding: 9rem 0;
     display: flex;
-    justify-content: space-between;
     align-items:center;
     position: relative;
+    justify-content: space-between;
 }
 
 .cont02 .inner .left{
-    width: 464px;
+    width: 35%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -469,7 +473,7 @@ header .inner nav a img{
 
 .cont02 .inner .left .list .group .item{
     width: calc(100% / 2 - 1rem);
-    height: 27rem;
+    padding: 15px 5px;
     background-color: white;
     border-radius: 1rem;
     text-align: center;
@@ -490,6 +494,7 @@ header .inner nav a img{
 .cont02 .inner .left .list .item figure p{
     width: 100%;
     font-size: 1.4rem;
+    margin-top: 15px;
     margin-bottom: 0.5rem;
 }
 
@@ -501,41 +506,39 @@ header .inner nav a img{
 }
 
 .cont02 .inner .right{
-    width: 83rem;
-    height: 70.6rem;
-    position: absolute;
-    top: 9rem;
-    right: 0;
-}
-
-.cont02 .inner .right .image img{
-    display: block;
-    width: 46.3rem;
-    height: 61.9rem;
-    position: absolute;
-    object-fit: cover;
-}
-
-.cont02 .inner .right .image img:first-child{
-    top: 20.4rem;
-    left: 0;
-    z-index: 2;
-}
-.cont02 .inner .right .image img:nth-child(2){
-    top: 0;
-    right: 0;
+    width: 60%;
+    position: relative;
 }
 
 .cont02 .inner .right .image .picture2{
     display: none;
 }
 
+.cont02 .inner .right .image{
+    display: flex;
+}
+
+.cont02 .inner .right .image figure{
+    width: 50%;
+}
+
+.cont02 .inner .right .image figure:nth-child(3){  
+    position: absolute;
+}
+
+.cont02 .inner .right .image figure img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+} 
+
+
 
 .cont02 .inner .right .next{
-    width: 12.6rem;
     position: absolute;
-    bottom: -11rem;
-    right: 21.8rem;
+    margin: 20px;
+    right: 0;
+    width: 12.6rem;
     font-size: 4rem;
     display: flex;
     align-items: center;
@@ -631,7 +634,8 @@ footer{
 }
 
 footer .inner{
-    width: 70.8rem;
+    max-width: 70.8rem;
+    width: calc(100% - 50px);
     margin: 0 auto;
 }
 
@@ -659,8 +663,11 @@ footer .inner hr{
 
 footer .inner nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
+}
+footer .inner nav ul:nth-child(2){
+    margin: 0 50px;
 }
 
 footer .inner nav ul li {
@@ -687,6 +694,7 @@ footer .inner p{
     word-break: keep-all; 
     line-height: 1.5; 
     text-align: center;
+    font-size: 15px;
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span{
@@ -701,16 +709,137 @@ footer .inner p{
     flex-direction: row;
 }
 
+@media all and (max-width : 1400px){
+    .cont02 .inner .left {
+        width: 35%;
+    }
+
+    .cont02 .inner .left .title h3 {
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    .cont02 .inner .left .title h2 {
+        font-size: 52px;
+    }
+
+
+}
+
+@media all and (max-width : 1200px){
+    .main_visual .text h2{
+        font-size: 60px;
+    }
+
+    .main_visual .text h3{
+        font-size: 20px;
+    }
+
+    .cont02 .inner {
+        padding: 5rem 0;
+    }
+
+    .cont02 .inner .left {
+        width: 35%;
+    }
+
+    .cont02 .inner .left .title h3 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .cont02 .inner .left .title h2 {
+        font-size: 42px;
+    }
+    
+    .cont01 .inner .list .item .slides{
+        display: none;
+    }
+    .cont01 .inner .list .item {
+        width: calc(100% / 4 - 12px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .cont02 .inner .right .next {
+        font-size: 30px;
+        margin: 20px 0 0 0 ;
+        bottom: -40px;
+    }
+
+    .cont02 .inner .right .next img {
+        width: 20px;
+        height: 15px;
+        object-fit: cover;
+        margin-left: 1rem;
+    }
+
+    .cont03 .inner {
+        padding: 140px 0;
+        width: calc(100% - 20px);
+        margin: 0 auto;
+    }
 
 
 
+    .cont03 .inner .list .item {
+        width: calc(100% / 4 - 5px);
+        position: relative;
+    }
+
+    .cont03 .inner .title h3 {
+        font-size: 54px;
+    }
+
+    .cont03 .inner .title p {
+        font-size: 24px;
+    }
+
+    .cont02 .inner .left .list .item figure p {
+        width: 100%;
+        font-size: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    .cont03 .inner .list .item span {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        background-color: black;
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0 0 10px;
+    }
+
+    .cont03 .inner .list .item span img {
+        width: 16px;
+        height: 15px;
+        object-fit: cover;
+    }
+}
+
+@media all and (max-width : 1040px){
+    .cont02 .inner .left .list .item figure p {
+        font-size: 11px;
+    }
+}
 
 /* 태블릿 */
 @media all and (max-width : 1024px){
     html{font-size: 8px;}
 
     header{
-        height: 50px;
+        height: 30px;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.603);
         position: fixed;
@@ -776,7 +905,6 @@ footer .inner p{
 
     
     .main_visual{
-        height: 51.1rem;
         background-repeat: no-repeat;
         background-position: center;
         background-size: 1920px 100vh;
@@ -785,6 +913,7 @@ footer .inner p{
     }
  
     .main_visual img{
+        max-height: 100%;
         height: 100%;
     }
 
@@ -794,10 +923,10 @@ footer .inner p{
     }
 
     .main_visual .text h2{
-        font-size: 42px;
-        margin: 7px 0 61px;
+        font-size: 52px;
+        margin: 5px 0 52px;
         word-break: keep-all;
-        letter-spacing: 0;
+        letter-spacing: -0.4rem;
     }
 
     .main_visual .text a{
@@ -816,7 +945,6 @@ footer .inner p{
 
     .cont01{
         width: 100%;
-        height: 100rem;
     }
 
     .cont01 .inner{
@@ -906,8 +1034,7 @@ footer .inner p{
     
     .cont02 .inner {
         width: calc(100% - 80px);
-        height: 643px;
-        padding: 54px 0;
+        padding: 40px 0;
         margin: 0 auto;
         display: flex;
         justify-content:space-between
@@ -916,7 +1043,7 @@ footer .inner p{
     
 
     .cont02 .inner .left{
-        width: 300px;
+        width: 35%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -931,38 +1058,15 @@ footer .inner p{
     .cont02 .inner .left .title h2{
         font-size: 36px;
     }
-
-    .cont02 .inner .left .list .group .item{
-        height: 175.7px;
-    }
  
     .cont02 .inner .right .image img {
         display: block;
         width: 300px;
-        height: 401px;
         object-fit: cover;
     }
 
     .cont02 .inner .right{
-        position: static;
-        width: 512.3px;
-        height: 100%;
-        top: 54px;
-        right:  0px;
         display: flex;
-    }
-
-
-    .cont02 .inner .right .image img:first-child {
-        position: relative;
-        top: 134px;
-        z-index: 2;
-    }
-    .cont02 .inner .right .image img:last-child {
-        position: relative;
-        top: -401.3px;
-        right: -212px;
-        
     }
 
     .cont02 .inner .right .image .picture2{
@@ -971,13 +1075,10 @@ footer .inner p{
 
     .cont02 .inner .right .image{
         width: 100%;
-        height: 100%;
     }
 
     .cont02 .inner .right .image figure{
-       
         width: 300px;
-        height: 401px;
     }
 
     .cont02 .inner .right .image .picture0{
@@ -989,18 +1090,10 @@ footer .inner p{
         right: 0;
     } 
 
-    .cont02 .inner .right .next{
-        right: 100px;
-        bottom: 105px;
-    }
+
 
     .cont03{
         height: 100%;
-    }
-    .cont03 .inner{
-        width: calc(100% - 40px);
-        margin: 0 auto;
-        padding: 100px 0;
     }
 
     .cont03 .inner .title h3{
@@ -1030,32 +1123,290 @@ footer .inner p{
         word-break: keep-all;
         line-height: 1.5;
         text-align: center;
-        font-size: 14px;
+        font-size: 13px;
     }
 
 }
 
-
-/* 모바일 */
-@media all and (max-width : 414px){
-    html{font-size: 6px;}
-    body{overflow-x: hidden;}
-    .main_visual .text h3 {
-        font-size: 12.5px;
+@media all and (max-width : 1000px) {
+    .cont02 .inner .left .list .item figure p {
+        font-size: 11px;
+    }
+}
+@media all and (max-width : 910px){
+    .main_visual .text h2{
+        font-size: 45px;
     }
 
+    .main_visual .text h3{
+        font-size: 12.8px;
+    }
+
+    .cont02 .inner {
+        padding: 30px 0;
+    }
+
+    .cont02 .inner .right .image figure {
+        width: 250px;
+    }
+}
+
+
+@media all and (max-width : 850px){
+    .cont02 .inner .left .title h2 {
+        font-size: 28px;
+    }
+
+    .cont02 .inner .left .title h3 {
+        font-size: 22px;
+    }
+}
+
+@media all and (max-width : 760px){
+    .main_visual .text h2{
+        font-size: 38px;
+        margin: 5px 0 38px;
+    }
+
+    .main_visual .text h3{
+        font-size: 12.8px;
+    }
+}
+
+@media all and (max-width : 700px){
+
     .main_visual .text h2 {
-        font-size: 20px;
-        margin: 7px 0 20px;
+        font-size: 35px;
+        margin: 5px 0 28px;
     }
 
     .main_visual .text a {
         text-align: center;
-        line-height: 21px;
+        line-height: 29.85px;
         cursor: pointer;
-        font-size: 10px;
-        width: 63px;
-        height: 21px;
+        font-size: 14px;
+        width: 97px;
+        height: 29.85px;
+        color: white;
+        background-color: #DB5182;
+        border: none;
+        margin-top: 35px;
+        font-weight: 300;
+    }
+    
+    .cont01 .inner .list .item .slides .color span {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 2.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cont01 .inner .list .item .slides .color span:nth-of-type(1) p {
+        width: 5.4px;
+        height: 5.4px;
+        border-radius: 50%;
+        background-color: #ffffff;
+    }
+
+    .cont01 .inner .list .item .slides .color img {
+        width: 20px;
+    }
+
+    .cont02 .inner {
+        width: 100%;
+        padding: 34px 0;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cont02 .inner .left{
+        position: relative;
+        width: calc(100% - 100px);
+        margin: 0 auto;
+    }
+
+    .cont02 .inner .left .title{
+        width: 100%;
+        padding-bottom: 35px;
+    }
+
+    .cont02 .inner .left .title h2 {
+        font-size: 25px;
+    }
+
+    .cont02 .inner .left .title h3 {
+        font-size: 18px;
+    }
+
+    .cont02 .inner .left .list .group:last-child{
+        display: none;
+    }
+    .cont02 .inner .right{
+        order: -1;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .cont02 .inner .right .image figure:nth-child(3) {
+        position: static;
+    }
+
+    .cont02 .inner .right .image {
+        width: 100%;
+        display: flex;
+    }
+    .cont02 .inner .right .image figure {
+        display: block;
+        width: calc(100% / 3);
+        object-fit: cover;
+    }
+
+    .cont02 .inner .right .image figure img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .cont02 .inner .left .title h3 {
+        font-size: 20px;
+    }
+
+    .cont02 .inner .left .title h2 {
+        font-size: 34px;
+    }
+
+
+    .cont02 .inner .right .next {
+        margin: 12px 0 0 0;
+        font-size: 25px;
+    }
+
+    .cont02 .inner .left .list .group:first-child {
+        
+    }
+    .cont02 .inner .right .image img:last-child {
+        position: static;
+    }
+
+    .cont02 .inner .right .image img:nth-child(2) {
+        position: static;
+    }
+    
+    .cont02 .inner .right .image img:first-child {
+        position: static;
+        z-index: 2;
+    }
+
+    .cont02 .inner .right .image .picture2{
+        display: block;
+    }
+
+    .cont02 .inner .left .list .group .item {
+        height: 100%;
+        padding: 0 0 20px; 
+
+    }
+
+
+    .cont02 .inner .left .list .item figure p {
+    font-size: 15px;
+    }
+
+    .cont02 .inner .left .list .item figure strong {
+        font-size: 18px;
+    }
+}
+
+
+@media all and (max-width : 670px){
+    .cont01 .inner .list .item .slides .color span {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 2.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cont01 .inner .list .item .slides .color span:nth-of-type(1) p {
+        width: 5.4px;
+        height: 5.4px;
+        border-radius: 50%;
+        background-color: #ffffff;
+    }
+
+    .cont01 .inner .list .item .slides .color img {
+        width: 16px;
+    }
+}
+
+
+@media all and (max-width : 640px){
+    .cont01 .inner .list .item .slides .color span {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main_visual .text a {
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+        font-size: 12px;
+        width: 85px;
+        height: 25px;
+        color: white;
+        background-color: #DB5182;
+        border: none;
+        margin-top: 23px;
+        font-weight: 300;
+    }
+}
+
+@media all and (max-width : 620px){
+    .cont02 .inner .left .title h2 {
+        font-size: 28px;
+    }
+
+    .cont02 .inner .left .title h3 {
+        font-size: 20px;
+    }
+
+    .cont02 .inner .right .next {
+        margin: 12px 0 0 0;
+        font-size: 22px;
+    }
+}
+
+@media all and (max-width : 560px){
+
+    .main_visual .text h2 {
+        font-size: 30px;
+        margin: 5px 0 24px;
+    }
+
+    .main_visual .text h3 {
+        font-size: 11px;
+    }
+
+    .main_visual .text a {
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+        font-size: 9px;
+        width: 75px;
+        height: 25px;
         color: white;
         background-color: #DB5182;
         border: none;
@@ -1063,10 +1414,68 @@ footer .inner p{
         font-weight: 300;
     }
 
-    .main_visual .text {
-        position: absolute;
-        left: 8%;
-        top: 50%;
+    .cont02 .inner .left .title h2 {
+        font-size: 28px;
+    }
+
+    .cont02 .inner .left .title h3 {
+        font-size: 20px;
+    }
+
+    .cont02 .inner .right .next {
+        margin: 12px 0 0 0;
+        font-size: 22px;
+    }
+}
+
+@media all and (max-width : 500px){
+    .cont02 .inner .left .list .item figure p {
+        font-size: 12px;
+    }
+
+    .main_visual .text h3 {
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width : 480px){
+    .main_visual .text h2 {
+        font-size: 25px;
+        letter-spacing: -0.2rem;
+        margin: 5px 0 24px;
+    }
+}
+
+
+/* 모바일 */
+@media all and (max-width : 414px){
+    html{font-size: 6px;}
+    body{overflow-x: hidden;}
+
+    .main_visual .text{
+        margin-top: 5px;
+    }
+    .main_visual .text h3 {
+        font-size: 8px;
+    }
+
+    .main_visual .text h2 {
+        font-size: 20px;
+        margin: 4px 0 13px;
+    }
+
+    .main_visual .text a {
+        text-align: center;
+        line-height: 21px;
+        cursor: pointer;
+        font-size: 5px;
+        width: 70px;
+        height: 21px;
+        color: white;
+        background-color: #DB5182;
+        border: none;
+        margin-top: 10px;
+        font-weight: 300;
     }
 
     .cont01 {
@@ -1125,19 +1534,16 @@ footer .inner p{
 
     .cont02 .inner {
         width: 100%;
-        height: 643px;
-        padding: 54px 0;
+        padding: 34px 0;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     .cont02 .inner .left{
         position: relative;
-        top:-300px;
-        left: 40px;
-        width: calc(100% - 80px);
+        width: calc(100% - 50px);
+        margin: 0 auto;
     }
 
     .cont02 .inner .left .title{
@@ -1149,25 +1555,29 @@ footer .inner p{
     }
     .cont02 .inner .right{
         order: -1;
-        flex-direction: row;
-        right: 0;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .cont02 .inner .right .image figure:nth-child(3) {
+        position: static;
     }
 
     .cont02 .inner .right .image {
         width: 100%;
-        height: 100%;
         display: flex;
     }
-    .cont02 .inner .right .image img {
+    .cont02 .inner .right .image figure {
         display: block;
-        width: 100%;
-        height: calc(100% / 3);
+        width: calc(100% / 3);
         object-fit: cover;
     }
 
-    .cont02 .inner .left .list .group .item figure{
-        
+    .cont02 .inner .right .image figure img{
+        width: 100%;
+        object-fit: cover;
     }
+
     .cont02 .inner .left .title h3 {
         font-size: 20px;
     }
@@ -1178,15 +1588,13 @@ footer .inner p{
 
 
     .cont02 .inner .right .next {
-        right: 20px;
-        top: 0px;
+        margin: 12px 0 0 0;
         font-size: 18px;
     }
 
     .cont02 .inner .left .list .group:first-child {
         
     }
-
     .cont02 .inner .right .image img:last-child {
         position: static;
     }
